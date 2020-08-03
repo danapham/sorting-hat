@@ -18,8 +18,8 @@ const buildForm = () => {
   let domString = "";
 
   domString += `<h2 class="text-center">Enter First Year's Name</h2>`;
-  domString += `<form class="form-inline" id="whole-form">
-                  <div class="form-group mb-2 center-block">
+  domString += `<form class="form-inline justify-content-center" id="whole-form">
+                  <div class="form-group mb-2">
                     <label for="staticEmail2" class="sr-only">Student</label>
                     <input type="text" readonly class="form-control-plaintext" id="staticStudent" value="Student:">
                   </div>
@@ -53,8 +53,8 @@ const buildCards = (e) => {
   if (target === 'form-btn') {
   if (nameEntered === '') {
     domString += `<h2 class="text-center">Enter First Year's Name</h2>`;
-    domString += `<h3>Please type a name</h3>`;
-    domString += `<form class="form-inline" id="whole-form">
+    domString += `<h5 class="text-center text-danger">Please type a name</h5>`;
+    domString += `<form class="form-inline justify-content-center" id="whole-form">
                     <div class="form-group mb-2">
                       <label for="staticEmail2" class="sr-only">Student</label>
                       <input type="text" readonly class="form-control-plaintext" id="staticStudent" value="Student:">
@@ -96,10 +96,9 @@ for (let i = 0; i < studentCards.length; i++) {
 };
 
 const expelStudent = (e) => {
-  const expelButtonClicked = e.target.id;
-  console.log(expelButtonClicked);
-  console.log(studentCards);
-  if (expelButtonClicked !== '') {
+  const expelButtonClicked = e.target.nodeName;
+
+  if (expelButtonClicked === 'A') {
   studentCards.splice(expelButtonClicked, 1);
   rebuildCards();
 }};
