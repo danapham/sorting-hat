@@ -44,10 +44,16 @@ button {
   justify-content: space-between;
 }
 
+#student-cards {
+  display: flex;
+}
+
 .card {
   background-color: #3A1F0F;
   color: white;
   opacity: .9;
+  margin: 2%;
+  width: 25%;
 }
 
 .card-body {
