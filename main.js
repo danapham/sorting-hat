@@ -72,7 +72,7 @@ const buildCards = (e) => {
       printToDom("form", domString);
     } else {
       for (let i = 0; i < studentCards.length; i++) {
-        domString += `<div class="card" style="width: 18rem;" id="${i}">
+        domString += `<div class="card" id="${i}">
                         <div class="card-body"id="${i}">
                           <h5 class="card-title">${studentCards[i].name}</h5>
                           <p class="card-text">${studentCards[i].house}</p>
@@ -89,7 +89,7 @@ const buildCards = (e) => {
 const rebuildCards = () => {
   let domString = "";
   for (let i = 0; i < studentCards.length; i++) {
-    domString += `<div class="card" style="width: 18rem;" id="${i}">
+    domString += `<div class="card" id="${i}">
                   <div class="card-body"id="${i}">
                     <h5 class="card-title">${studentCards[i].name}</h5>
                     <p class="card-text">${studentCards[i].house}</p>
