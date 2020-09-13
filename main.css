@@ -46,6 +46,7 @@ button {
 
 #student-cards {
   display: flex;
+  flex-flow: row wrap;
 }
 
 .card {
@@ -53,7 +54,7 @@ button {
   color: white;
   opacity: .9;
   margin: 2%;
-  width: 25%;
+  width: 20%;
 }
 
 .card-body {
@@ -72,4 +73,32 @@ button {
   background-color: #bc8174;
   color: white;
   border: #3A1F0F;
+}
+
+/* SMALL PHONES */
+@media only screen and (max-width: 600px) {
+  .text-large {
+    font-size: 10vw;
+  }
+
+  .text-medium {
+    font-size: 5vw;
+  }
+
+  .text-small {
+    font-size: 4.5vw;
+  }
+
+  .jumbotron {
+    padding: 3%;
+  }
+
+  .jumbotron-body {
+    margin: .5%;
+    width: 100%;
+  }
+
+  #jumbotron-btn {
+    font-size: 5vw;
+  }
 }
